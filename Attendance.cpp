@@ -2,16 +2,16 @@
 using namespace std;
 
 int main(){
-    string attendance ;
-    cin>>attendance;
+    string attnd ;
+    cin>>attnd;
 
     int absent = 0;
     int late = 0;
 
-    for(int i=0;i<attendance.size();i++){
-        if(attendance[i] == 'A') ++absent;
-        if(attendance[i] == 'L'  ) {
-            if( i > 0 && attendance[ i - 1 ] == 'L' ){
+    for(int i=0;i<attnd.size();i++){
+        if(attnd[i] == 'A') ++absent;
+        if(attnd[i] == 'L'  ) {
+            if( i > 0 && attnd[ i - 1 ] == 'L' ){
                 ++late;
             }
             else {
