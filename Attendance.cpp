@@ -10,18 +10,19 @@ int main(){
 
     for(int i=0;i<attnd.size();i++)
     {
-        if(attnd[i] == 'A') ++absent;
+        if(attnd[i] == 'A')
+        {
+            ++absent;
+        }
         if(attnd[i] == 'L'  ) 
             {
-                 if( i > 0 && attnd[ i - 1 ] == 'L' )
-                    {
-                    ++late;
-                     }
-                  else 
-                    {
-                        late = 1;
-                    }
+                l++;
              }
+         else 
+             {
+                 late = 0;
+              }
+            
     }
     if( absent > 2 || late >= 3 )
         cout<<"False";
